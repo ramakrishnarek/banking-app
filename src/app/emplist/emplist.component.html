@@ -1,0 +1,12 @@
+
+<p>Employees List</p>
+
+<ul class="emps">
+  <li *ngFor="let emp of emps"
+    [class.selected]="emp === selectedEmp"
+    (click)="onSelect(emp)">
+    <span>{{emp.id}}</span> {{emp.name}}
+  </li>
+</ul>
+
+<app-empdetail [emp]="selectedEmp"></app-empdetail>

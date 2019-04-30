@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { FirstChildComponent } from './first-child/first-child.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EmplistComponent } from './emplist/emplist.component';
+import { EmpdetailComponent } from './empdetail/empdetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    FirstChildComponent
+    FirstChildComponent,
+    EmplistComponent,
+    EmpdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +23,6 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [FirstComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
