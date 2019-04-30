@@ -1,4 +1,3 @@
-<hr>
 <div>Employee Details</div>
 <div *ngIf="emp">
 
@@ -9,5 +8,5 @@
       <input [(ngModel)]="emp.name" placeholder="name"/>
     </label>
   </div>
-
+  <button (click)="goBack()">go back</button>
 </div>

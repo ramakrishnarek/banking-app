@@ -1,12 +1,11 @@
 
-<p>Employees List</p>
+<p><strong>Employees List</strong></p>
 
-<ul class="emps">
-  <li *ngFor="let emp of emps"
-    [class.selected]="emp === selectedEmp"
-    (click)="onSelect(emp)">
-    <span>{{emp.id}}</span> {{emp.name}}
+<ul >
+  <li *ngFor="let emp of emps">
+      <a routerLink="/detail/{{emp.id}}">
+        <span > {{emp.name}}</span>
+      </a>
   </li>
 </ul>
-
-<app-empdetail [emp]="selectedEmp"></app-empdetail>
+<!-- <app-empdetail [emp]="selectedEmp"></app-empdetail> -->

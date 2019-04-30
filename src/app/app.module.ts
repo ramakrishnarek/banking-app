@@ -8,6 +8,8 @@ import { FirstChildComponent } from './first-child/first-child.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmplistComponent } from './emplist/emplist.component';
 import { EmpdetailComponent } from './empdetail/empdetail.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { EmpdetailComponent } from './empdetail/empdetail.component';
     FirstComponent,
     FirstChildComponent,
     EmplistComponent,
-    EmpdetailComponent
+    EmpdetailComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

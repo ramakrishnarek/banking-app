@@ -15,4 +15,8 @@ export class EmpService {
     return of(EMPS);
   }
 
+  getEmp(id: number): Observable<Emp> {    
+    return of(EMPS.find(emp => emp.id === id));
+  }
+
 }

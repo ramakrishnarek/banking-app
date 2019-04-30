@@ -18,5 +18,10 @@
   </li>
 </ul>
  -->
-<h1>{{title}}</h1>
-<app-emplist></app-emplist>
+<h3>{{title}}</h3>
+<nav>
+  <a routerLink="/dashboard"> Landing Page   |  </a>
+  <a routerLink="/emps"> Employees  </a>
+</nav>
+<hr>
+<router-outlet></router-outlet>
