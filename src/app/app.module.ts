@@ -10,6 +10,7 @@ import { EmplistComponent } from './emplist/emplist.component';
 import { EmpdetailComponent } from './empdetail/empdetail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingComponent } from './landing/landing.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LandingComponent } from './landing/landing.component';
     FirstChildComponent,
     EmplistComponent,
     EmpdetailComponent,
-    LandingComponent
+    LandingComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
