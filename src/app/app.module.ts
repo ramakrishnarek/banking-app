@@ -11,6 +11,9 @@ import { EmpdetailComponent } from './empdetail/empdetail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingComponent } from './landing/landing.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { AdminModule } from './admin/admin.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthModule }              from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { RegistrationComponent } from './registration/registration.component';
     EmplistComponent,
     EmpdetailComponent,
     LandingComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    PageNotFoundComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AdminModule,
+    AuthModule,
     AppRoutingModule
   ],
   providers: [],

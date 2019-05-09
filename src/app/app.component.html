@@ -21,8 +21,12 @@
 <h3>{{title}}</h3>
 <nav>
   <a routerLink="/newreg" routerLinkActive="active"> New Signup   |  </a>
-  <a routerLink="/dashboard" routerLinkActive="active"> Dashboard   |  </a>
-  <a routerLink="/emps" routerLinkActive="active"> Employees  </a>
+  <a routerLink="/admin" routerLinkActive="active">  Admin | </a>
+  <a routerLink="/login" routerLinkActive="active" *ngIf="!authService.isLoggedIn">  Login | </a>
+  <a routerLink="/login" routerLinkActive="active" *ngIf="authService.isLoggedIn">  Logout | </a>
+  <a routerLink="/dashboard" routerLinkActive="active"> Employee List  |  </a>
+  <a routerLink="/emps" routerLinkActive="active"> Manage Employees  | </a>
+  <a routerLink="/first" routerLinkActive="active"> Others  </a>
 </nav>
 <hr>
 <router-outlet></router-outlet>
