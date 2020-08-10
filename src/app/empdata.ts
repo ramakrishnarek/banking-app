@@ -1,10 +1,10 @@
 import { Emp } from './emp';
 
 export const EMPS: Emp[] = [
-  { id: 1, name: 'Dipti' },
+  { id: 1, name: 'Krishna' },
   { id: 2, name: 'Rama' },
-  { id: 3, name: 'Usha' },
-  { id: 4, name: 'Lakshmi' },
-  { id: 5, name: 'Anni' },
-  { id: 6, name: 'Anand' }
+  { id: 3, name: 'Reddy' },
+  { id: 4, name: 'Kanugonda' },
+  { id: 5, name: 'K' },
+  { id: 6, name: 'Ram' }
 ];
