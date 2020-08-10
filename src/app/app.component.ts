@@ -7,12 +7,12 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My Learning Activities';
+  title = 'ABC Retail Banking';
   constructor(public authService: AuthService){
 
     console.log(this.authService.isLoggedIn);
   }
 
-  
+
 
 }

@@ -1,52 +1,39 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { RegistrationService } from '../registration.service';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
+
 export class RegistrationComponent implements OnInit {
+  topics = ['Angular', 'React', 'Vue'];
+  userModel = new User('Rob', 'rob@test.com', 5556665566, 'default', 'morning', true);
+  topicHasError = true;
+  submitted = false;
+  errorMsg = ''; 
 
-  user: User = {
-    firstName: 'New',
-    lastName: 'User',
-    role: 'Guest',
-    notes: undefined
-  };
-
-  roles: Array<string> = [
-    'Guest',
-    'Admin',
-    'Owner',
-    'Operator'
-  ];
-
-  constructor() { }
+  constructor(private _regService: RegistrationService) { }
 
   ngOnInit() {
   }
 
-  @ViewChild('userForm') userForm: FormGroup;
-  logForm(){
-    console.log(this.userForm.value);
+  validateTopic(value) {
+    if (value === 'default') {
+      this.topicHasError = true;
+    } else {
+      this.topicHasError = false;
+    }
   }
 
-  logFormValue(){
-    console.log(this.userForm.controls);
- }
-  
-   disableForm(){
-     console.log(this.userForm.disabled)
-    if (this.userForm.disabled) {
-      console.log('need to enable')
-    } else {
-      this.userForm.enable();
-    }
-   }
-
-  // enableForm(){
-  //   this.userForm.enable();
-  // }
+  onSubmit() {
+    this.submitted = true;
+    this._regService.enroll(this.userModel)
+      .subscribe(
+        response => console.log('Success!', response),
+        error => this.errorMsg = error.statusText
+      )
+  }
 }
